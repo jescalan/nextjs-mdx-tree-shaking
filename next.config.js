@@ -1,4 +1,6 @@
-module.exports = {
+const withSize = require('next-size')
+
+module.exports = withSize({
   pageExtensions: ['js', 'jsx', 'mdx'],
   webpack(config, options) {
     config.module.rules.push({
@@ -7,4 +9,4 @@ module.exports = {
     })
     return config
   }
-}
+})
